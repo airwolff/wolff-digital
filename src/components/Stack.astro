@@ -1,0 +1,36 @@
+---
+import { stack } from '@/data/stack';
+const mainCards = stack.filter(s => !s.isDubsado);
+const dubsado = stack.find(s => s.isDubsado)!;
+---
+<section id="stack">
+  <div class="px-12 pt-[3.75rem] pb-9">
+    <p class="text-[0.625rem] font-bold tracking-[2px] uppercase text-base-content/40 mb-[0.625rem]">
+      What tools I'll use
+    </p>
+    <h2 class="text-[2.5rem] font-black">Built around your project.</h2>
+    <p class="text-sm text-base-content/55 max-w-[36rem] mt-3 leading-[1.7]">
+      Every project is different, so the tools get chosen accordingly. These are the
+      ones I reach for most — reliable, fast, and cheap to run. If you already use
+      something you want to keep, we'll work with it. Most clients pay under $20/month
+      out of pocket once the site is live. I also offer a monthly maintenance option for
+      updates and anything that comes up — something we'd agree on upfront.
+    </p>
+  </div>
+  <!-- 6-card gold gap grid -->
+  <div class="grid grid-cols-3 gap-5 bg-primary p-5 border-t-2 border-neutral border-b-2">
+    {mainCards.map((card, i) => (
+      <div class:list={['bg-base-100 p-10 reveal', `d${i + 1}`]}>
+        <h4 class="text-[1.0625rem] font-extrabold mb-[0.625rem]">{card.name}</h4>
+        <p class="text-xs text-base-content/60 leading-[1.7]">{card.description}</p>
+        <p class="text-[0.6875rem] font-bold text-[#7a5c00] mt-3 tracking-[0.5px]">{card.cost}</p>
+      </div>
+    ))}
+    <!-- Dubsado centered in row 3 col 2 -->
+    <div class="col-start-2 bg-base-100 p-10 reveal">
+      <h4 class="text-[1.0625rem] font-extrabold mb-[0.625rem]">{dubsado.name}</h4>
+      <p class="text-xs text-base-content/60 leading-[1.7]">{dubsado.description}</p>
+      <p class="text-[0.6875rem] font-bold text-[#7a5c00] mt-3 tracking-[0.5px]">{dubsado.cost}</p>
+    </div>
+  </div>
+</section>

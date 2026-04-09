@@ -1,0 +1,31 @@
+---
+import { processSteps } from '@/data/process';
+---
+<section id="process">
+  <div class="px-12 pt-[3.75rem] pb-9">
+    <p class="text-[0.625rem] font-bold tracking-[2px] uppercase text-base-content/40 mb-[0.625rem]">
+      How we work together
+    </p>
+    <h2 class="text-[2.5rem] font-black">Here's what we'll do.</h2>
+  </div>
+  <div class="grid grid-cols-2 px-12 pb-[3.75rem]">
+    {processSteps.map((step, i) => (
+      <div
+        class:list={[
+          'flex gap-[1.375rem] items-start py-10 reveal',
+          `d${i + 1}`,
+          i % 2 === 0 ? 'pr-11 border-r border-base-content/10' : 'pl-11',
+          i < 2 ? 'border-b border-base-content/10' : '',
+        ]}
+      >
+        <div class:list={['w-[2.625rem] h-[2.625rem] border-2 flex items-center justify-center text-[0.9375rem] font-extrabold flex-shrink-0 bg-primary', step.accentColor]}>
+          {step.number}
+        </div>
+        <div>
+          <h4 class="text-[0.9375rem] font-extrabold mb-2">{step.title}</h4>
+          <p class="text-xs text-base-content/60 leading-[1.7]">{step.description}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
