@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Scroll reveal — elements start hidden, JS adds .revealed */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  will-change: transform;
+}
+.reveal.revealed {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+/* Stagger delays for grid children */
+.reveal.revealed.d1 { transition-delay: 0.08s; }
+.reveal.revealed.d2 { transition-delay: 0.16s; }
+.reveal.revealed.d3 { transition-delay: 0.24s; }
+.reveal.revealed.d4 { transition-delay: 0.32s; }
+.reveal.revealed.d5 { transition-delay: 0.40s; }
+.reveal.revealed.d6 { transition-delay: 0.48s; }
