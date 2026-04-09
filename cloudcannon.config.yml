@@ -1,0 +1,34 @@
+# CloudCannon CMS configuration for Wolff Digital
+# Docs: https://cloudcannon.com/documentation/
+
+collections_config:
+  # No collections yet — homepage is a single page
+  # Add portfolio/case-study collection here when ready
+
+data_config:
+  services:
+    path: src/data/services.ts
+  faq:
+    path: src/data/faq.ts
+  stack:
+    path: src/data/stack.ts
+  process:
+    path: src/data/process.ts
+
+paths:
+  uploads: public/uploads
+
+# Editable regions in components (CloudCannon visual editor)
+_editables:
+  content:
+    bold: true
+    italic: true
+    link: true
+    bulletedlist: true
+    numberedlist: true
+
+# Build config — must match Cloudflare Pages settings
+build:
+  install_command: npm install
+  build_command: npm run build
+  output_path: dist
