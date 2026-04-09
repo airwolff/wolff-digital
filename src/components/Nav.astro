@@ -1,0 +1,36 @@
+---
+// No props — nav content is static
+---
+<nav
+  id="main-nav"
+  class="bg-base-100 border-b-2 border-neutral px-12 py-[1.125rem] flex justify-between items-center sticky top-0 z-[100] transition-all duration-300"
+>
+  <a href="/" class="text-[0.9375rem] font-black tracking-[2px] text-neutral no-underline">
+    WOLFF DIGITAL
+  </a>
+  <div class="flex gap-7 items-center">
+    <a href="#services" class="text-xs text-base-content/55 hover:text-base-content transition-colors">What I do</a>
+    <a href="#process" class="text-xs text-base-content/55 hover:text-base-content transition-colors">How we work</a>
+    <a href="#stack" class="text-xs text-base-content/55 hover:text-base-content transition-colors">The tools</a>
+    <a href="#about" class="text-xs text-base-content/55 hover:text-base-content transition-colors">About</a>
+    <a href="#contact" class="btn btn-primary btn-sm border-2 border-neutral rounded-none text-xs font-bold hover:bg-neutral hover:text-primary transition-colors">
+      Get a proposal
+    </a>
+  </div>
+</nav>
+
+<script>
+  const nav = document.getElementById('main-nav');
+  window.addEventListener('scroll', () => {
+    if (!nav) return;
+    if (window.scrollY > 40) {
+      nav.style.background = 'rgba(247,245,240,0.82)';
+      nav.style.backdropFilter = 'blur(12px)';
+      nav.style.webkitBackdropFilter = 'blur(12px)';
+    } else {
+      nav.style.background = '';
+      nav.style.backdropFilter = '';
+      nav.style.webkitBackdropFilter = '';
+    }
+  });
+</script>
