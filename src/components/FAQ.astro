@@ -1,0 +1,17 @@
+---
+import { faq } from '@/data/faq';
+---
+<section>
+  <div class="px-12 pt-[3.75rem] pb-9">
+    <p class="text-[0.625rem] font-bold tracking-[2px] uppercase text-base-content/40 mb-[0.625rem]">FAQ</p>
+    <h2 class="text-[2.5rem] font-black">Questions I get asked.</h2>
+  </div>
+  <div class="px-12 pb-16">
+    {faq.map(item => (
+      <div class="faq-item reveal py-6 border-b border-base-content/10 last:border-b-0">
+        <h4 class="text-[0.9375rem] font-bold mb-2">{item.question}</h4>
+        <p class="text-[0.8125rem] text-base-content/60 leading-[1.8] max-w-[42.5rem]">{item.answer}</p>
+      </div>
+    ))}
+  </div>
+</section>
