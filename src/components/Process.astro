@@ -18,7 +18,7 @@ import { processSteps } from '@/data/process';
           i < 2 ? 'border-b border-base-content/10' : '',
         ]}
       >
-        <div class:list={['w-[2.625rem] h-[2.625rem] border-2 flex items-center justify-center text-[0.9375rem] font-extrabold flex-shrink-0 bg-primary', step.accentColor]}>
+        <div aria-hidden="true" class:list={['w-[2.625rem] h-[2.625rem] border-2 flex items-center justify-center text-[0.9375rem] font-extrabold flex-shrink-0 bg-primary', step.accentColor]}>
           {step.number}
         </div>
         <div>

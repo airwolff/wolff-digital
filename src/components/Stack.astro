@@ -1,7 +1,8 @@
 ---
 import { stack } from '@/data/stack';
 const mainCards = stack.filter(s => !s.isDubsado);
-const dubsado = stack.find(s => s.isDubsado)!;
+const dubsado = stack.find(s => s.isDubsado);
+if (!dubsado) throw new Error('Dubsado card missing from stack data — check src/data/stack.ts');
 ---
 <section id="stack">
   <div class="px-12 pt-[3.75rem] pb-9">
