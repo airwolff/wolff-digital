@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  font-family: 'Inter', sans-serif;
+}
+
 /* Scroll reveal — elements start hidden, JS adds .revealed */
 .reveal {
   opacity: 0;
