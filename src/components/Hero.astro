@@ -1,0 +1,49 @@
+---
+// No props
+---
+<section
+  id="hero"
+  class="bg-primary border-b-2 border-neutral px-12 py-[6.25rem] text-center cursor-crosshair"
+>
+  <p class="text-[0.6875rem] font-bold tracking-[3px] uppercase text-neutral/50 mb-[1.125rem]">
+    Midcoast Maine
+  </p>
+  <h1 class="text-[3.625rem] font-black text-neutral leading-[1.05] mb-5">
+    Your work, done right.<br />
+    <span class="text-[#5c4300]">No agency required.</span>
+  </h1>
+  <p class="text-[1.0625rem] text-neutral/65 max-w-[34rem] mx-auto mb-9 leading-[1.7]">
+    A website that loads when you have a weak signal. Emails that get opened.
+    I handle the tech — you run your business.
+  </p>
+  <div class="flex gap-[0.875rem] justify-center">
+    <a
+      href="#contact"
+      class="btn btn-neutral rounded-none border-2 border-neutral text-primary text-[0.8125rem] font-extrabold hover:bg-primary hover:text-neutral transition-colors"
+    >
+      Get a proposal →
+    </a>
+    <a
+      href="#services"
+      class="btn btn-outline rounded-none border-2 border-neutral text-neutral text-[0.8125rem] font-bold hover:bg-neutral hover:text-primary transition-colors"
+    >
+      See my work
+    </a>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const hero = document.getElementById('hero') as HTMLElement | null;
+    if (!hero) return;
+    hero.addEventListener('mousemove', (e: MouseEvent) => {
+      const rect = hero.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      hero.style.background = `radial-gradient(circle at ${x}% ${y}%, rgb(0,245,184) 0%, rgb(0,210,165) 6%, #ebbb40 28%)`;
+    });
+    hero.addEventListener('mouseleave', () => {
+      hero.style.background = '';
+    });
+  });
+</script>
