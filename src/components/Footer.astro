@@ -1,0 +1,27 @@
+---
+const year = new Date().getFullYear();
+const links = [
+  { text: 'What I do', href: '#services' },
+  { text: 'How we work', href: '#process' },
+  { text: 'The tools', href: '#stack' },
+  { text: 'About', href: '#about' },
+  { text: 'Contact', href: '#contact' },
+];
+---
+<footer class="bg-neutral px-12 py-7 flex justify-between items-center">
+  <a href="/" class="text-[0.8125rem] font-extrabold text-primary tracking-[2px] no-underline">
+    WOLFF DIGITAL
+  </a>
+  <nav aria-label="Footer">
+    <ul class="flex gap-6 list-none p-0 m-0">
+      {links.map(link => (
+        <li>
+          <a href={link.href} class="text-[0.6875rem] text-white/30 hover:text-white/60 transition-colors no-underline">
+            {link.text}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+  <p class="text-[0.6875rem] text-white/20">Midcoast Maine · © {year}</p>
+</footer>

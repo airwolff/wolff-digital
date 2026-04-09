@@ -1,0 +1,31 @@
+---
+// Dubsado form embed — replace DUBSADO_FORM_ID with real ID from Dubsado dashboard
+// Dashboard path: Dubsado → Lead Captures → your form → Share → Embed code
+const dubsadoFormId = 'DUBSADO_FORM_ID';
+---
+<section id="contact" class="bg-primary px-12 py-20 text-center border-t-2 border-neutral border-b-2">
+  <p class="text-[0.625rem] font-bold tracking-[2px] uppercase text-neutral/40 mb-[0.625rem]">
+    Start a project
+  </p>
+  <h2 class="text-[2.5rem] font-black mb-[0.625rem]">Let's talk about your project.</h2>
+  <p class="text-[0.9375rem] text-neutral/60 mb-9">
+    Fill this out — I'll get back to you within one business day.
+  </p>
+  <!-- Dubsado embed container -->
+  <div class="max-w-[33.75rem] mx-auto border-2 border-neutral bg-base-100 p-9 text-left">
+    <p class="text-[0.625rem] text-neutral/30 mb-4 tracking-[1px] uppercase">Inquiry form</p>
+    {dubsadoFormId === 'DUBSADO_FORM_ID' && (
+      <div class="text-xs text-neutral/40 italic text-center py-8">
+        Dubsado form embed goes here.<br />
+        Replace DUBSADO_FORM_ID in Contact.astro with your real form ID.
+      </div>
+    )}
+    {dubsadoFormId !== 'DUBSADO_FORM_ID' && (
+      <script
+        src={`https://dubsado.com/public/form/site/${dubsadoFormId}`}
+        type="text/javascript"
+        async
+      ></script>
+    )}
+  </div>
+</section>
