@@ -15,7 +15,17 @@ body {
 .reveal.revealed {
   opacity: 1;
   transform: none;
+  will-change: auto;
   transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .reveal.revealed {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 /* Stagger delays for grid children */
 .reveal.revealed.d1 { transition-delay: 0.08s; }
