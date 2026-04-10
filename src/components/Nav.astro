@@ -40,12 +40,13 @@
 <div
   id="mobile-menu"
   aria-hidden="true"
-  class="hidden md:hidden fixed top-[57px] left-0 right-0 bg-base-100 border-b-2 border-neutral z-[99] px-5 py-4 flex flex-col gap-4"
+  class="fixed top-[57px] left-0 right-0 bg-base-100 border-b-2 border-neutral z-[99] px-5 py-4 flex-col gap-4"
+  style="display:none;"
 >
-  <a href="#services" class="text-sm text-base-content/70 hover:text-base-content transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">What I do</a>
-  <a href="#process" class="text-sm text-base-content/70 hover:text-base-content transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">How we work</a>
-  <a href="#stack" class="text-sm text-base-content/70 hover:text-base-content transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">The tools</a>
-  <a href="#about" class="text-sm text-base-content/70 hover:text-base-content transition-colors" onclick="document.getElementById('mobile-menu').classList.add('hidden')">About</a>
+  <a href="#services" class="text-sm text-base-content/70 hover:text-base-content transition-colors" onclick="document.getElementById('mobile-menu').style.display='none'">What I do</a>
+  <a href="#process" class="text-sm text-base-content/70 hover:text-base-content transition-colors" onclick="document.getElementById('mobile-menu').style.display='none'">How we work</a>
+  <a href="#stack" class="text-sm text-base-content/70 hover:text-base-content transition-colors" onclick="document.getElementById('mobile-menu').style.display='none'">The tools</a>
+  <a href="#about" class="text-sm text-base-content/70 hover:text-base-content transition-colors" onclick="document.getElementById('mobile-menu').style.display='none'">About</a>
 </div>
 
 <script>
@@ -54,26 +55,26 @@
     const hamburger = document.getElementById('hamburger') as HTMLButtonElement | null;
     const mobileMenu = document.getElementById('mobile-menu') as HTMLElement | null;
 
-    // Hamburger toggle
+    const closeMenu = () => {
+      if (!mobileMenu) return;
+      mobileMenu.style.display = 'none';
+      mobileMenu.setAttribute('aria-hidden', 'true');
+      hamburger?.setAttribute('aria-expanded', 'false');
+    };
+    const openMenu = () => {
+      if (!mobileMenu) return;
+      mobileMenu.style.display = 'flex';
+      mobileMenu.setAttribute('aria-hidden', 'false');
+      hamburger?.setAttribute('aria-expanded', 'true');
+    };
+
     hamburger?.addEventListener('click', () => {
-      const isOpen = !mobileMenu?.classList.contains('hidden');
-      if (isOpen) {
-        mobileMenu?.classList.add('hidden');
-        mobileMenu?.setAttribute('aria-hidden', 'true');
-        hamburger.setAttribute('aria-expanded', 'false');
-      } else {
-        mobileMenu?.classList.remove('hidden');
-        mobileMenu?.setAttribute('aria-hidden', 'false');
-        hamburger.setAttribute('aria-expanded', 'true');
-      }
+      mobileMenu?.style.display === 'flex' ? closeMenu() : openMenu();
     });
 
-    // Close mobile menu on outside click
     document.addEventListener('click', (e) => {
-      if (nav && !nav.contains(e.target as Node) && mobileMenu && !mobileMenu.classList.contains('hidden')) {
-        mobileMenu.classList.add('hidden');
-        mobileMenu.setAttribute('aria-hidden', 'true');
-        hamburger?.setAttribute('aria-expanded', 'false');
+      if (nav && !nav.contains(e.target as Node) && mobileMenu?.style.display === 'flex') {
+        closeMenu();
       }
     });
 
