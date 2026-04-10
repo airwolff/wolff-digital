@@ -36,14 +36,51 @@
   document.addEventListener('DOMContentLoaded', () => {
     const hero = document.getElementById('hero') as HTMLElement | null;
     if (!hero) return;
+
+    let currentX = 30, currentY = 60;
+    let targetX = 30, targetY = 60;
+    let mouseActive = false;
+
+    // Ambient drift — two overlapping sine waves for organic movement
+    function ambientPos(t: number) {
+      const x = 35 + Math.sin(t * 0.00028) * 22 + Math.sin(t * 0.00071) * 10;
+      const y = 50 + Math.cos(t * 0.00035) * 18 + Math.cos(t * 0.00059) * 8;
+      return { x, y };
+    }
+
+    function setGradient(x: number, y: number) {
+      hero.style.background = [
+        `radial-gradient(ellipse 70% 65% at ${x}% ${y}%,`,
+        `rgba(0,245,184,0.38) 0%,`,
+        `rgba(0,225,165,0.14) 38%,`,
+        `transparent 68%),`,
+        `#ebbb40`,
+      ].join(' ');
+    }
+
+    function loop(ts: number) {
+      if (!mouseActive) {
+        const a = ambientPos(ts);
+        targetX = a.x;
+        targetY = a.y;
+      }
+      // Lerp — slow catch-up on ambient, faster on mouse
+      const speed = mouseActive ? 0.09 : 0.025;
+      currentX += (targetX - currentX) * speed;
+      currentY += (targetY - currentY) * speed;
+      setGradient(currentX, currentY);
+      requestAnimationFrame(loop);
+    }
+
     hero.addEventListener('mousemove', (e: MouseEvent) => {
       const rect = hero.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) / rect.width) * 100;
-      const y = ((e.clientY - rect.top) / rect.height) * 100;
-      hero.style.background = `radial-gradient(circle at ${x}% ${y}%, rgb(0,245,184) 0%, rgb(0,210,165) 6%, #ebbb40 28%)`;
+      targetX = ((e.clientX - rect.left) / rect.width) * 100;
+      targetY = ((e.clientY - rect.top) / rect.height) * 100;
+      mouseActive = true;
     });
-    hero.addEventListener('mouseleave', () => {
-      hero.style.background = '';
-    });
+
+    hero.addEventListener('mouseleave', () => { mouseActive = false; });
+
+    requestAnimationFrame(loop);
   });
 </script>
