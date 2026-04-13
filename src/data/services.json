@@ -1,14 +1,14 @@
 [
   {
     "title": "Web Design & Development",
-    "description": "A site that looks good, loads when you've got one bar of cell service, and works on every phone. You'll be able to update it yourself — no developer needed day-to-day. Every build includes written documentation and a training walkthrough."
+    "description": "A fast, professional site that works on every phone and is easy for you to manage without calling a developer every time you need a change. Every build includes clear documentation and a hands-on walkthrough."
   },
   {
     "title": "Email Design & Development",
-    "description": "Automated emails that go out when they should, say the right thing, and look great in every inbox. From a simple welcome sequence to a full campaign system. I've built these at enterprise scale for Wyndham."
+    "description": "Automated emails that send when they should, look right in every inbox, and help you stay in front of customers without doing it all by hand. From welcome sequences to full campaign systems, I built these at enterprise scale for Wyndham."
   },
   {
     "title": "SEO",
-    "description": "Help people find you on Google. I make sure your site is structured the right way, loads fast (which Google rewards directly), and says the things your customers are actually searching for."
+    "description": "Help people find you on Google. I make sure your site is fast, clearly organized, and written around the terms your customers are already searching for."
   }
 ]

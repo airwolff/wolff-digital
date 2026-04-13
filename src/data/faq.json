@@ -1,22 +1,26 @@
 [
   {
     "question": "Can I see examples of your work?",
-    "answer": "A lot of what I've built is covered by NDAs — enterprise software and ticketing systems for Kubota, Hilton, Hyatt, and Syngenta; email systems for Wyndham. I can walk through any of it on a call. Local client sites get added to this page as they launch."
-  },
-  {
-    "question": "What if I need something you haven't built before?",
-    "answer": "I'll tell you honestly whether I can do it, whether I'd need to figure it out, or whether it's genuinely outside what I can deliver. If it's something I need to learn, that's on my dime — not yours."
+    "answer": "Most of my past work is under NDA, so I can't post all of it publicly. But I can walk you through the kinds of projects I've done, how they worked, and what problems they solved. As I launch more local client sites, I'll add them here."
   },
   {
     "question": "What's it like working with just one person?",
-    "answer": "Easier, honestly. You call or email me, I answer. No one in between taking notes and passing them along. If something needs to change, we just change it."
+    "answer": "Easier, honestly. You call or email me, and I answer. No one is in between taking notes and passing them along. If something needs to change, we just change it."
   },
   {
     "question": "How much does it cost?",
     "answer": "Every project is different, so I don't post prices. What I can tell you: you'll get a flat price in writing before any work starts. No hourly billing, no mystery fees at the end."
   },
   {
+    "question": "How long does a project usually take?",
+    "answer": "It depends on the size, but you'll get a real timeline before any work starts. If something changes, I'll tell you early and explain why."
+  },
+  {
+    "question": "Do I need to know exactly what I want before I reach out?",
+    "answer": "No. If you know the problem you're trying to solve, that's enough. We'll figure out the right approach from there."
+  },
+  {
     "question": "What happens after my site launches?",
-    "answer": "You get written documentation and a training walkthrough of everything — how to update content, how to read your traffic, who to call if something breaks. You won't be handed a login and left to figure it out."
+    "answer": "You get written documentation and a training walkthrough — how to update content, how to read your traffic, and what to do if something breaks. You won't be handed a login and left to figure it out. And if you want help after launch, I can support that too."
   }
 ]
