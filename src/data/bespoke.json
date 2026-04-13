@@ -1,23 +1,11 @@
 {
-  "eyebrow": "Why I don't use WordPress",
-  "headline": "WordPress has a plugin for everything — and each one has a monthly bill.",
-  "body": "I chose a different stack specifically so I can build what you need, rather than renting it forever. For WordPress calendar management, the most popular plugin is Calendly, which costs $10–16/month. Eventbrite takes 6.6% + $1.79 off every ticket. For something you'll use for years, building it once often costs less than 12 months of subscriptions — and you own it. If you already have tools you rely on, I'll work with those instead. We'll figure out what makes sense before anything gets scoped.",
+  "eyebrow": "Tools you own, not rent",
+  "headline": "Most small business tools are monthly rentals. You can build them once instead.",
+  "body": "The price looks small until you've paid it for two or three years — and you still don't own anything. I build tools you keep. If your current tools already work, I'll build around them instead of replacing them.",
   "examples": [
-    {
-      "name": "Booking calendar",
-      "desc": "Calendly is $10–16/month. Build it once, own it."
-    },
-    {
-      "name": "Event ticketing",
-      "desc": "Eventbrite takes 6.6% + $1.79 per ticket. That adds up."
-    },
-    {
-      "name": "Customer portal",
-      "desc": "Client login, order history, account info — built to your specs."
-    },
-    {
-      "name": "Contact forms & CRM",
-      "desc": "Capture leads the way your business actually works."
-    }
+    { "name": "Booking calendar",     "desc": "Skip the monthly scheduling fee. Build it once and keep it." },
+    { "name": "Event ticketing",      "desc": "Per-ticket fees add up fast. For repeat events, owning the system costs less." },
+    { "name": "Customer portal",      "desc": "Client login, order history, account info — built for how your business actually works." },
+    { "name": "Forms & lead capture", "desc": "No plugin maze. Just forms that match your workflow." }
   ]
 }
