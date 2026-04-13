@@ -1,12 +1,14 @@
 ---
+import { Image } from 'astro:assets';
+import headshot from '../assets/andy-wolff.jpg';
 import about from '@/data/about.json';
 ---
 <section id="about" class="px-5 sm:px-12 py-12 sm:py-16 border-b-2 border-base-content/10 flex flex-col sm:flex-row gap-8 sm:gap-11 items-start sm:items-center reveal">
-  <img
-    src="/andy-wolff.jpg"
+  <Image
+    src={headshot}
     alt="Andy Wolff"
-    width="100"
-    height="100"
+    width={200}
+    height={200}
     class="w-[6.25rem] h-[6.25rem] rounded-full border-[3px] border-primary object-cover object-top flex-shrink-0"
   />
   <div>
