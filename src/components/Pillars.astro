@@ -6,7 +6,7 @@ const titleColors = ['text-primary', 'text-secondary', 'text-accent'];
   {pillars.map((pillar, i) => (
     <div class:list={['pillar reveal', `d${i + 1}`, 'px-6 sm:px-12 py-8 sm:py-10 text-center', i < pillars.length - 1 ? 'sm:border-r border-white/[0.08]' : '']}>
       <h2 class:list={['text-[1.1875rem] font-black mb-[0.625rem]', titleColors[i]]}>{pillar.title}</h2>
-      <p class="text-xs text-white/68 leading-[1.7] text-pretty">
+      <p class="text-xs text-white/65 leading-[1.7] text-pretty">
         {pillar.description}
       </p>
     </div>

@@ -9,7 +9,7 @@ import bespoke from '@/data/bespoke.json';
     <h2 class="text-[1.75rem] font-black text-white leading-[1.2] mb-[0.875rem]">
       {bespoke.headline}
     </h2>
-    <p class="text-[0.8125rem] text-white/72 leading-[1.8] text-pretty">
+    <p class="text-[0.8125rem] text-white/70 leading-[1.8] text-pretty">
       {bespoke.body}
     </p>
   </div>
@@ -17,7 +17,7 @@ import bespoke from '@/data/bespoke.json';
     {bespoke.examples.map((ex, i) => (
       <div class:list={['border border-primary/30 p-[0.875rem] reveal', `d${i + 1}`]}>
         <p class="text-xs font-bold text-primary mb-1">{ex.name}</p>
-        <p class="text-[0.6875rem] text-white/62 leading-[1.5]">{ex.desc}</p>
+        <p class="text-[0.6875rem] text-white/60 leading-[1.5]">{ex.desc}</p>
       </div>
     ))}
   </div>

@@ -3,14 +3,14 @@ import faq from '@/data/faq.json';
 ---
 <section id="faq">
   <div class="px-5 sm:px-12 pt-10 sm:pt-[3.75rem] pb-6 sm:pb-9">
-    <p class="text-[0.625rem] font-bold tracking-[2px] uppercase text-base-content/58 mb-[0.625rem]">FAQ</p>
+    <p class="text-[0.625rem] font-bold tracking-[2px] uppercase text-base-content/60 mb-[0.625rem]">FAQ</p>
     <h2 class="text-[2.5rem] font-black text-balance">Questions I get asked.</h2>
   </div>
   <div class="px-5 sm:px-12 pb-10 sm:pb-16">
     {faq.map(item => (
       <div class="faq-item reveal py-6 border-b border-base-content/10 last:border-b-0">
         <h4 class="text-[0.9375rem] font-bold mb-2">{item.question}</h4>
-        <p class="text-[0.8125rem] text-base-content/72 leading-[1.8] max-w-[42.5rem] text-pretty">{item.answer}</p>
+        <p class="text-[0.8125rem] text-base-content/70 leading-[1.8] max-w-[42.5rem] text-pretty">{item.answer}</p>
       </div>
     ))}
   </div>
