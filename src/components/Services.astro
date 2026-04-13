@@ -1,13 +1,14 @@
 ---
-import { services } from '@/data/services';
+import services from '@/data/services.json';
+const accentColors = ['bg-primary', 'bg-secondary', 'bg-accent'];
 ---
 <section id="services">
   <div class="px-5 sm:px-12 pt-10 sm:pt-[3.75rem] pb-6 sm:pb-9">
-    <p class="text-[0.625rem] font-bold tracking-[2px] uppercase text-base-content/40 mb-[0.625rem]">
+    <p class="text-[0.625rem] font-bold tracking-[2px] uppercase text-base-content/58 mb-[0.625rem]">
       What I do
     </p>
     <h2 class="text-[2.5rem] font-black">Three services. Done well.</h2>
-    <p class="text-sm text-base-content/55 max-w-[36rem] mt-3 leading-[1.7]">
+    <p class="text-sm text-base-content/70 max-w-[36rem] mt-3 leading-[1.7] text-pretty">
       I don't try to do everything. I picked three areas I'm good at and I stay
       in my lane — and when something needs building that doesn't exist yet, I'll build it.
     </p>
@@ -16,11 +17,11 @@ import { services } from '@/data/services';
   <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 bg-primary p-5 border-t-2 border-base-content/10">
     {services.map((service, i) => (
       <div class:list={['bg-base-200 p-11 reveal', `d${i + 1}`]}>
-        <div class:list={['w-11 h-1 mb-5', service.accentColor]} aria-hidden="true" />
+        <div class:list={['w-11 h-1 mb-5', accentColors[i]]} aria-hidden="true" />
         <h3 class="text-[1.375rem] font-extrabold mb-[0.875rem] leading-[1.2]">
           {service.title}
         </h3>
-        <p class="text-[0.8125rem] text-base-content/60 leading-[1.8]">
+        <p class="text-[0.8125rem] text-base-content/72 leading-[1.8]">
           {service.description}
         </p>
       </div>

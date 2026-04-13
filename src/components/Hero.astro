@@ -1,33 +1,26 @@
 ---
-// No props
+import hero from '@/data/hero.json';
 ---
 <section
   id="hero"
   class="bg-primary border-b-2 border-neutral px-5 sm:px-12 py-16 sm:py-[6.25rem] text-center cursor-crosshair"
 >
-  <p class="text-[0.6875rem] font-bold tracking-[3px] uppercase text-neutral/50 mb-[1.125rem]">
-    Midcoast Maine
+  <p class="text-[0.6875rem] font-bold tracking-[3px] uppercase text-neutral/70 mb-[1.125rem]">
+    {hero.eyebrow}
   </p>
   <h1 class="text-[2.5rem] sm:text-[3.625rem] font-black text-neutral leading-[1.05] mb-5">
-    Your work, done right.<br />
-    <span class="text-[#5c4300]">No agency required.</span>
+    {hero.headline}<br />
+    <span class="text-[#5c4300]">{hero.headlineAccent}</span>
   </h1>
-  <p class="text-[1.0625rem] text-neutral/65 max-w-[34rem] mx-auto mb-9 leading-[1.7]">
-    A website that loads when you have a weak signal. Emails that get opened.
-    I handle the tech — you run your business.
+  <p class="text-[1.0625rem] text-neutral/80 max-w-[34rem] mx-auto mb-9 leading-[1.7] text-pretty">
+    {hero.subhead}
   </p>
-  <div class="flex flex-col sm:flex-row gap-[0.875rem] justify-center items-center">
+  <div class="flex justify-center">
     <a
-      href="#contact"
+      href={hero.ctaHref}
       class="btn btn-neutral rounded-none border-2 border-neutral text-primary text-[0.8125rem] font-extrabold hover:bg-primary hover:text-neutral transition-colors"
     >
-      Get a proposal →
-    </a>
-    <a
-      href="#services"
-      class="btn btn-outline rounded-none border-2 border-neutral text-neutral text-[0.8125rem] font-bold hover:bg-neutral hover:text-primary transition-colors"
-    >
-      See my work
+      {hero.cta}
     </a>
   </div>
 </section>
@@ -51,8 +44,8 @@
     function setGradient(x: number, y: number) {
       hero.style.background = [
         `radial-gradient(ellipse 70% 65% at ${x}% ${y}%,`,
-        `rgba(0,245,184,0.38) 0%,`,
-        `rgba(0,225,165,0.14) 38%,`,
+        `rgba(0,245,184,0.62) 0%,`,
+        `rgba(0,225,165,0.26) 38%,`,
         `transparent 68%),`,
         `#ebbb40`,
       ].join(' ');

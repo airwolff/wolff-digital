@@ -3,7 +3,6 @@ const year = new Date().getFullYear();
 const links = [
   { text: 'What I do', href: '#services' },
   { text: 'How we work', href: '#process' },
-  { text: 'The tools', href: '#stack' },
   { text: 'About', href: '#about' },
   { text: 'Contact', href: '#contact' },
 ];
@@ -16,12 +15,12 @@ const links = [
     <ul class="flex gap-6 list-none p-0 m-0">
       {links.map(link => (
         <li>
-          <a href={link.href} class="text-[0.6875rem] text-white/30 hover:text-white/60 transition-colors no-underline">
+          <a href={link.href} class="text-[0.6875rem] text-white/55 hover:text-white/80 transition-colors no-underline">
             {link.text}
           </a>
         </li>
       ))}
     </ul>
   </nav>
-  <p class="text-[0.6875rem] text-white/20">Midcoast Maine · © {year}</p>
+  <p class="text-[0.6875rem] text-white/45">Midcoast Maine · © {year}</p>
 </footer>

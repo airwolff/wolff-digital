@@ -1,33 +1,23 @@
 ---
-const examples = [
-  { name: 'Booking calendar',    desc: 'Calendly is $10–16/month. Build it once, own it.' },
-  { name: 'Event ticketing',     desc: 'Eventbrite takes 6.6% + $1.79 per ticket. That adds up.' },
-  { name: 'Customer portal',     desc: 'Client login, order history, account info — built to your specs.' },
-  { name: 'Contact forms & CRM', desc: 'Capture leads the way your business actually works.' },
-];
+import bespoke from '@/data/bespoke.json';
 ---
 <section class="bg-neutral px-5 sm:px-12 py-10 sm:py-12 border-t-2 border-primary border-b-2 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
   <div>
     <p class="text-[0.625rem] text-primary font-bold tracking-[2px] uppercase mb-[0.875rem]">
-      Why I don't use WordPress
+      {bespoke.eyebrow}
     </p>
     <h2 class="text-[1.75rem] font-black text-white leading-[1.2] mb-[0.875rem]">
-      WordPress has a plugin for everything — and each one has a monthly bill.
+      {bespoke.headline}
     </h2>
-    <p class="text-[0.8125rem] text-white/50 leading-[1.8]">
-      I chose a different stack specifically so I can build what you need instead of
-      renting it forever. Calendly is $10–16/month. Eventbrite takes 6.6% + $1.79 off
-      every ticket. For something you'll use for years, building it once often costs
-      less than 12 months of subscriptions — and you own it. If you already have tools
-      you rely on, I'll work with those instead. We'll figure out what makes sense before
-      anything gets scoped.
+    <p class="text-[0.8125rem] text-white/72 leading-[1.8] text-pretty">
+      {bespoke.body}
     </p>
   </div>
   <div class="grid grid-cols-2 gap-[0.625rem]">
-    {examples.map((ex, i) => (
+    {bespoke.examples.map((ex, i) => (
       <div class:list={['border border-primary/30 p-[0.875rem] reveal', `d${i + 1}`]}>
         <p class="text-xs font-bold text-primary mb-1">{ex.name}</p>
-        <p class="text-[0.6875rem] text-white/40 leading-[1.5]">{ex.desc}</p>
+        <p class="text-[0.6875rem] text-white/62 leading-[1.5]">{ex.desc}</p>
       </div>
     ))}
   </div>

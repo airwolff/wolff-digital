@@ -1,0 +1,11 @@
+{
+  "eyebrow": "Why I don't use WordPress",
+  "headline": "WordPress has a plugin for everything — and each one has a monthly bill.",
+  "body": "I chose a different stack specifically so I can build what you need instead of renting it forever. Calendly is $10–16/month. Eventbrite takes 6.6% + $1.79 off every ticket. For something you'll use for years, building it once often costs less than 12 months of subscriptions — and you own it. If you already have tools you rely on, I'll work with those instead. We'll figure out what makes sense before anything gets scoped.",
+  "examples": [
+    { "name": "Booking calendar",    "desc": "Calendly is $10–16/month. Build it once, own it." },
+    { "name": "Event ticketing",     "desc": "Eventbrite takes 6.6% + $1.79 per ticket. That adds up." },
+    { "name": "Customer portal",     "desc": "Client login, order history, account info — built to your specs." },
+    { "name": "Contact forms & CRM", "desc": "Capture leads the way your business actually works." }
+  ]
+}

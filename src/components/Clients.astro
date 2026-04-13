@@ -1,23 +1,23 @@
 ---
-const clients = ['Kubota', 'Hilton', 'Hyatt', 'Syngenta', 'Wyndham'];
+import clients from '@/data/clients.json';
 ---
 <section class="px-5 sm:px-12 py-8 sm:py-11 border-b-2 border-base-content/10 text-center">
-  <p class="text-[0.625rem] font-bold tracking-[2px] uppercase text-base-content/40 mb-5">
-    Work I've done — under NDA, but the names speak for themselves
+  <p class="text-[0.625rem] font-bold tracking-[2px] uppercase text-base-content/58 mb-5 text-balance">
+    {clients.label}
   </p>
   <ul class="flex justify-center flex-wrap list-none p-0 m-0">
-    {clients.map((name, i) => (
+    {clients.names.map((name, i) => (
       <li
         class:list={[
-          'px-8 py-[0.625rem] text-base font-extrabold text-base-content/30 tracking-[1px] uppercase',
-          i < clients.length - 1 ? 'border-r border-base-content/10' : '',
+          'px-8 py-[0.625rem] text-base font-extrabold text-base-content/55 tracking-[1px] uppercase',
+          i < clients.names.length - 1 ? 'sm:border-r border-base-content/10' : '',
         ]}
       >
         {name}
       </li>
     ))}
   </ul>
-  <p class="text-[0.6875rem] text-base-content/35 mt-[0.875rem]">
-    Enterprise software · Global email campaigns · National marketing · Small &amp; mid-size business sites · Happy to walk through details on a call
+  <p class="text-[0.6875rem] text-base-content/58 mt-[0.875rem] text-pretty">
+    {clients.tagline}
   </p>
 </section>

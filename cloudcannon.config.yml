@@ -6,29 +6,66 @@ collections_config:
   # Add portfolio/case-study collection here when ready
 
 data_config:
+  hero:
+    path: src/data/hero.json
+  pillars:
+    path: src/data/pillars.json
+  clients:
+    path: src/data/clients.json
   services:
-    path: src/data/services.ts
-  faq:
-    path: src/data/faq.ts
-  stack:
-    path: src/data/stack.ts
+    path: src/data/services.json
+  bespoke:
+    path: src/data/bespoke.json
   process:
-    path: src/data/process.ts
+    path: src/data/process.json
+  about:
+    path: src/data/about.json
+  faq:
+    path: src/data/faq.json
+
+_inputs:
+  # Short text fields
+  eyebrow:
+    type: text
+  headline:
+    type: text
+  headlineAccent:
+    type: text
+  name:
+    type: text
+  cta:
+    type: text
+  ctaHref:
+    type: text
+  title:
+    type: text
+  number:
+    type: text
+  # Long text fields
+  subhead:
+    type: textarea
+  bio:
+    type: textarea
+  body:
+    type: textarea
+  description:
+    type: textarea
+  answer:
+    type: textarea
+  tagline:
+    type: textarea
+  # Short text
+  question:
+    type: text
+  label:
+    type: text
+  desc:
+    type: text
 
 paths:
   uploads: public/uploads
 
-# Editable regions in components (CloudCannon visual editor)
-_editables:
-  content:
-    bold: true
-    italic: true
-    link: true
-    bulletedlist: true
-    numberedlist: true
-
-# Build config — must match Cloudflare Pages settings
 build:
-  install_command: npm install
+  install_command: npm ci
   build_command: npm run build
   output_path: dist

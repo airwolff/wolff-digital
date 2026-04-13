@@ -8,31 +8,31 @@
       <p class="text-[0.625rem] text-primary font-bold tracking-[2px] uppercase mb-[0.875rem]">
         Built for Maine
       </p>
-      <h2 class="text-[2rem] sm:text-[2.5rem] font-black text-white leading-[1.2] mb-5">
-        Your site should load<br />even with two bars.
+      <h2 class="text-[2rem] sm:text-[2.5rem] font-black text-white leading-[1.2] mb-5 text-balance">
+        Your site should load even with two bars.
       </h2>
-      <p class="text-[0.8125rem] text-white/50 leading-[1.9] mb-6">
+      <p class="text-[0.8125rem] text-white/72 leading-[1.9] mb-6 text-pretty">
         You know how you pull up a local business on your phone and it just… sits there?
         That's not a you problem — it's how the site was built.<br /><br />
         Most sites around here are slow because they're built on old platforms packed
         with things nobody needs. I build differently — leaner, faster. The kind of site
         that loads before your visitor gives up.
       </p>
-      <div class="flex gap-2 flex-wrap">
+      <div class="flex flex-col sm:flex-row sm:flex-wrap gap-2">
         {['Loads on weak cell signal', 'Photos load sharp, not slow', 'Works on any phone', 'Served from everywhere'].map(tag => (
-          <span class="border border-primary/40 px-4 py-2 text-[0.6875rem] text-white/55">{tag}</span>
+          <span class="border border-primary/40 px-4 py-2 text-[0.6875rem] text-white/70">{tag}</span>
         ))}
       </div>
     </div>
     <!-- Right: speed bars -->
     <div>
-      <p class="text-[0.625rem] text-white/30 mb-5 tracking-[1px] uppercase">
+      <p class="text-[0.625rem] text-white/55 mb-5 tracking-[1px] uppercase">
         Google speed score · Mobile
       </p>
       <!-- Typical site bar -->
       <div class="mb-[1.625rem]">
         <div class="flex justify-between mb-2">
-          <span class="text-xs text-white/45">Typical local site</span>
+          <span class="text-xs text-white/65">Typical local site</span>
           <span class="text-xs font-bold text-[#e05252]">~45 / 100</span>
         </div>
         <div
@@ -45,12 +45,12 @@
         >
           <div class="h-full w-[45%] bg-[#e05252]"></div>
         </div>
-        <p class="text-[0.625rem] text-white/30 mt-[0.3125rem]">Takes 7–8 seconds to show anything on mobile</p>
+        <p class="text-[0.625rem] text-white/55 mt-[0.3125rem]">Takes 7–8 seconds to show anything on mobile</p>
       </div>
       <!-- Wolff Digital bar -->
       <div class="mb-2">
         <div class="flex justify-between mb-2">
-          <span class="text-xs font-semibold text-white/70">Wolff Digital standard</span>
+          <span class="text-xs font-semibold text-white/80">Wolff Digital standard</span>
           <span class="text-xs font-bold text-primary">95+ / 100</span>
         </div>
         <div
@@ -63,12 +63,12 @@
         >
           <div class="h-full" style="width:96%;background:linear-gradient(90deg,#ebbb40,rgb(0,245,184))"></div>
         </div>
-        <p class="text-[0.625rem] text-white/40 mt-[0.3125rem]">Under 1 second to start showing content</p>
+        <p class="text-[0.625rem] text-white/65 mt-[0.3125rem]">Under 1 second to start showing content</p>
       </div>
       <!-- Guarantee box -->
       <div class="mt-2 p-[1.125rem] border border-primary/40">
         <p class="text-xs font-bold text-primary mb-[0.3125rem]">Written into every contract.</p>
-        <p class="text-xs text-white/40 leading-[1.6]">
+        <p class="text-xs text-white/65 leading-[1.6]">
           If your site doesn't hit 95 or higher before launch, we don't launch.
           Not a target — a guarantee.
         </p>

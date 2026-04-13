@@ -1,0 +1,29 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Nav from '@/components/Nav.astro';
+import Footer from '@/components/Footer.astro';
+---
+<BaseLayout title="Page not found — Wolff Digital" description="This page doesn't exist.">
+  <Nav />
+  <main class="bg-base-100 min-h-[70vh] flex flex-col items-center justify-center px-5 text-center py-20">
+    <p class="text-[0.625rem] font-bold tracking-[3px] uppercase text-base-content/50 mb-4">404</p>
+    <h1 class="text-[2.5rem] sm:text-[3rem] font-black leading-[1.1] mb-4 text-balance">
+      That page doesn't exist.
+    </h1>
+    <p class="text-[0.9375rem] text-base-content/60 mb-10 text-pretty max-w-sm">
+      But here's a cat while you figure out where you were headed.
+    </p>
+    <img
+      src="https://placecats.com/1000/800"
+      alt="A placeholder cat"
+      width="500"
+      height="400"
+      class="border-2 border-neutral mb-10 max-w-full"
+      loading="lazy"
+    />
+    <a href="/" class="btn btn-neutral rounded-none border-2 border-neutral text-primary text-[0.8125rem] font-extrabold hover:bg-primary hover:text-neutral transition-colors">
+      Back to home →
+    </a>
+  </main>
+  <Footer />
+</BaseLayout>
