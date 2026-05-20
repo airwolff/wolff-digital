@@ -1,31 +1,35 @@
 ---
 import BaseLayout from '@/layouts/BaseLayout.astro';
-import Nav from '@/components/Nav.astro';
-import Hero from '@/components/Hero.astro';
-import Pillars from '@/components/Pillars.astro';
-import Clients from '@/components/Clients.astro';
-import Services from '@/components/Services.astro';
-import Bespoke from '@/components/Bespoke.astro';
-import Process from '@/components/Process.astro';
-import Performance from '@/components/Performance.astro';
-import About from '@/components/About.astro';
-import FAQ from '@/components/FAQ.astro';
 import Contact from '@/components/Contact.astro';
-import Footer from '@/components/Footer.astro';
+
+const year = new Date().getFullYear();
 ---
 <BaseLayout>
-  <Nav />
   <main>
-    <Hero />
-    <Pillars />
-    <Clients />
-    <Services />
-    <Performance />
-    <Bespoke />
-    <Process />
-    <About />
-    <FAQ />
+    <section
+      class="bg-primary border-b-2 border-neutral px-5 sm:px-12 py-20 sm:py-32 text-center"
+      style="background: radial-gradient(ellipse 70% 65% at 35% 50%, rgba(0,245,184,0.5) 0%, rgba(0,225,165,0.22) 38%, transparent 68%), #ebbb40;"
+    >
+      <p class="text-[0.6875rem] font-bold tracking-[3px] uppercase text-neutral/70 mb-[1.125rem]">
+        Currently on hiatus
+      </p>
+      <h1 class="text-[2.5rem] sm:text-[3.625rem] font-black text-neutral leading-[1.05] mb-5">
+        The studio is<br />
+        <span class="text-[#5c4300]">paused.</span>
+      </h1>
+      <p class="text-[1.0625rem] text-neutral/80 max-w-[34rem] mx-auto leading-[1.7] text-pretty">
+        Not taking on new projects right now. If you'd still like to reach out,
+        the inbox is open below.
+      </p>
+    </section>
+
     <Contact />
   </main>
-  <Footer />
+
+  <footer class="bg-neutral px-5 sm:px-12 py-6 sm:py-7 flex flex-col sm:flex-row gap-3 sm:gap-0 justify-between items-start sm:items-center">
+    <span class="text-[0.8125rem] font-extrabold text-primary tracking-[2px]">
+      WOLFF DIGITAL
+    </span>
+    <p class="text-[0.6875rem] text-white/45">Midcoast Maine · © {year}</p>
+  </footer>
 </BaseLayout>
